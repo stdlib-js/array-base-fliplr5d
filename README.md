@@ -45,30 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-fliplr5d
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var fliplr5d = require( '@stdlib/array-base-fliplr5d' );
+fliplr5d = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var fliplr5d = require( 'path/to/vendor/umd/array-base-fliplr5d/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.fliplr5d;
+})();
+</script>
 ```
 
 #### fliplr5d( x )
@@ -100,8 +108,13 @@ var out = fliplr5d( [ [ [ [ [ 1, 2 ], [ 3, 4 ] ] ] ] ] );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {.factory;
 var filled5dBy = require( '@stdlib/array-base-filled5d-by' );
 var fliplr5d = require( '@stdlib/array-base-fliplr5d' );
 
@@ -110,6 +123,11 @@ console.log( x );
 
 var y = fliplr5d( x );
 console.log( y );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
