@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import fliplr5d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@esm/index.mjs';
+import fliplr5d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@v0.2.2-esm/index.mjs';
 ```
 
 #### fliplr5d( x )
@@ -92,7 +92,7 @@ var out = fliplr5d( [ [ [ [ [ 1, 2 ], [ 3, 4 ] ] ] ] ] );
 
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filled5dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-filled5d-by@esm/index.mjs';
-import fliplr5d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@esm/index.mjs';
+import fliplr5d from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-fliplr5d@v0.2.2-esm/index.mjs';
 
 var x = filled5dBy( [ 1, 1, 3, 3, 3 ], discreteUniform( -50, 50 ) );
 console.log( x );
